@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 
@@ -9,7 +9,7 @@ function App() {
   }, []);
 
   const getNames = async () => {
-    const response = await axios.get("/names");
+    const response = await axios.get("/name");
     console.log(response);
     setUsername(response.data);
   };
